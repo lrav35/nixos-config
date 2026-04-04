@@ -65,8 +65,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    neovim
-    git
+    home-manager
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
