@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/hyprland.nix
     ];
 
   # Bootloader.
@@ -64,6 +65,8 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    neovim
+    git
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
