@@ -52,14 +52,20 @@
   
   home.packages = with pkgs; [
     git
+    unzip
     neovim
+    lua-language-server
+    gcc
+    cargo
     btop
     tree
     brave
+    mullvad-vpn
     bitwarden-desktop
     ghostty
     fuzzel
     kdePackages.dolphin
+    kdePackages.okular
     dunst
     waybar
     hyprlock

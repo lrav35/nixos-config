@@ -43,6 +43,10 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  fonts.packages = with pkgs; [
+    font-awesome
+  ];
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";

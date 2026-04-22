@@ -608,14 +608,15 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        clangd = {},
-        pyright = {},
-        jdtls = {},
-        -- tsserver = {},
-        html = {},
-        zls = {},
-        jsonls = {},
-        ocamllsp = {},
+        -- clangd = {},
+        -- pyright = {},
+        -- jdtls = {},
+        -- -- tsserver = {},
+        -- html = {},
+        -- zls = {},
+        -- jsonls = {},
+        -- ocamllsp = {},
+        nil_ls = {},
 
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -626,7 +627,7 @@ require('lazy').setup({
         --
 
         lua_ls = {
-          -- cmd = {...},
+          cmd = { vim.fn.exepath('lua-language-server') },
           -- filetypes = { ...},
           -- capabilities = {},
           settings = {
@@ -650,7 +651,9 @@ require('lazy').setup({
       require('mason').setup()
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys(servers or { 'jdtls', 'java-test', 'java-debug-adapter' })
+      local ensure_installed = vim.tbl_filter(function(server)
+        return server ~= 'lua_ls' 
+      end, vim.tbl_keys(servers))
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
       })

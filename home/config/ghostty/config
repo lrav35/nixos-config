@@ -11,7 +11,7 @@ mouse-scroll-multiplier = 2
 # Blank lines are ignored!
 
 # Empty values reset the configuration to the default value
-font-family = JetBrainsMono Nerd Font Mono
+font-family = Berkeley Mono
 
 
 ### bindings ###
