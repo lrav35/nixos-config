@@ -3,23 +3,23 @@
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 42, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/arch",
+        "custom/nixos",
         "hyprland/workspaces"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
-        "idle_inhibitor",
+        // "idle_inhibitor",
         "pulseaudio",
         "network",
-        "cpu",
-        "memory",
+        // "cpu",
+        // "memory",
         "temperature",
-        "hyprland/language",
+        // "hyprland/language",
         "battery",
         "battery#bat2",
         "clock"

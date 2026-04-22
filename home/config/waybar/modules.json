@@ -1,9 +1,12 @@
 {
-    "custom/arch": {
-        "format": "󰣇",
-        "tooltip": true,
-        "tooltip-format": "btw"
+    "image#nixos": {
+        "path": "/home/coins/images/nixos.svg",
+        "size": 10
     },
+    "custom/nixos": {
+        "format":"    ",
+        "tooltip": false,
+     },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -13,13 +16,6 @@
             "urgent": "",
             "active": "",
             "default": ""
-        }
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
         }
     },
     "pulseaudio": {
@@ -50,14 +46,6 @@
         "tooltip-format": "Network: <b>{ipaddr}/{cidr}</b>\nInterface: <b>{ifname}</b>",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠"
-    },
-    "cpu": {
-        "format": "  {usage}%",
-        "tooltip": true
-    },
-    "memory": {
-        "format": "  {}%",
-        "tooltip": true
     },
     "temperature": {
         "interval": 10,

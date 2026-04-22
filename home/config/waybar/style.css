@@ -1,5 +1,5 @@
 * {
-    font-family: "JetBrainsMono NerdFont";
+    font-family: "Berkeley Mono";
     border: none;
     min-height: 0;
     font-weight: 500;
@@ -105,11 +105,10 @@ window#waybar {
     box-shadow: none;
 }
 
-#custom-arch {
-    margin-left: 0px;
-    padding: 0 13px;
-    font-size: 25px;
-}
-#custom-arch:hover {
-    color: #f9eedb;
+#custom-nixos{
+        font-size: 20px;
+        background-image: url('/home/coins/images/nixos.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
 }
