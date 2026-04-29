@@ -8,6 +8,8 @@
         ./misc.nix
         ./network.nix
         ./services.nix
+        ./packages.nix
+        ./settings.nix
         ./users.nix
     ];
 }
