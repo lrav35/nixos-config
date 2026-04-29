@@ -71,6 +71,7 @@
     hyprlock
     hyprpaper
     swayosd
+    swaybg
     codex
   ];
 }
